@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <title>{{ site.name }}</title>
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+
+  <meta name="author" content="{{ site.name }}" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/styles/style.css" />
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="{{ site.baseurl }}/styles/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="{{ site.baseurl }}/styles/academicons.min.css">
+  <script type="text/javascript" src="{{ site.baseurl }}/js/toggleBib.js"></script>
+
+</head>
+
+
+
+<body>
+  <table style="width:100%;max-width:1000px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+      <td style="padding:0px">
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr style="padding:0px">
+            <td style="padding:2.5%;width:20%;max-width:20%">
+              <img style="width:100%;max-width:100%;border-radius: 10%;" alt="profile photo" src="images/profile.png">
+            </td>
+            <td style="padding:2.5%;width:60%;vertical-align:middle">
+              <h1>
+                Samet Hicsonmez
+              </h1>
+              <p>
+                I am a Ph.D. student in the <a href="http://ceng.metu.edu.tr/" target="_blank"> Computer Engineering Department</a> at <a href="http://www.metu.edu.tr/" target="_blank">Middle East Technical University</a> under supervision of <a href="http://user.ceng.metu.edu.tr/~emre/" target="_blank">Dr. Emre Akbas</a>. <br>
+                 Before coming to METU, I received my master degree from <a href="http://w3.bilkent.edu.tr/bilkent/" target="_blank">Bilkent University</a>, <a href="http://w3.cs.bilkent.edu.tr/en/" target="_blank">Computer Engineering Department</a> in 2014. <br>
+              </p>
+              <p style="text-align:center">
+                <div class="contact-buttons">
+                  <a href="mailto:nermin.samet@metu.edu.tr" target="_blank"><i class="far fa-envelope fa-2x"></i></a>
+                  <a href="https://github.com/nerminsamet" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+                  <a href="https://scholar.google.com.tr/citations?user=kEVeHU0AAAAJ" target="_blank"><i class="ai ai-google-scholar fa-2x"></i></a>
+                  <a href="https://www.linkedin.com/in/nermin-samet-a70007156" target="_blank"><i class="fab fa-linkedin-in fa-2x"></i></a>
+                  <a href="https://twitter.com/nemka_" target="_blank"><i class="fab fa-twitter fa-2x"></i></a>
+                  <a href="https://www.youtube.com/user/nemka911/videos" target="_blank"><i class="fab fa-youtube fa-2x"></i></a>
+                  <!-- <a href="" target="_blank"><i class="fab fa-flickr fa-2x"></i></a> -->
+                </div>
+              </p>
+            </td>
+          </tr>
+        </table>
+
+        <hr>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5% 2.5% 0% 2.5%;width:100%;vertical-align:middle">
+              <h2><b>News</b></h2>
+            </td>
+          </tr>
+        </table>
+
+        <div class="timeline">
+          <div class="timeline-news">
+
+            {% for news in site.categories.news %}
+            {% for cat in news.categories %}
+            {% if cat == 'news' %}
+            <div class="timeline-item">
+              <div class="timeline-date">
+                <div class="timeline-dot" style="background-color: {{news.color}};"></div>
+                <span style="background-color: {{news.color}};">{{news.date | date: "%b %Y"}}</span>
+                <p class="timeline-title">{{news.title}}</p>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+            {% endfor %}
+
+          </div>
+        </div>
+
+        <hr>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5% 2.5% 0% 2.5%;width:100%;vertical-align:middle">
+              <h2><b>Research</b></h2>
+            </td>
+          </tr>
+        </table>
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+          {% for research in site.categories.research %}
+          {% for cat in research.categories %}
+          {% if cat == 'research' %}
+          <tr>
+            <td style="padding:2.5%;width:75%;vertical-align:middle">
+              <h3>{{research.title}}</h3>
+              <br>
+              {{research.authors}}
+
+              <br>
+              <em>{{research.venue}}</em> {{ research.date | date: "%Y" }}
+              {%- if research.desc -%}, {{ research.desc }}{%- endif -%}
+              <br>
+              <div class="research-buttons">
+                {% if research.arxiv %}
+                <a href="{{research.arxiv}}" target="_blank"><button type="button" class="research-button"><i class="ai ai-arxiv fa-lg"></i><span>arXiv</span></button></a>
+                {% endif %}
+                {% if research.paper %}
+                <a href="{{research.paper}}" target="_blank"><button type="button" class="research-button"><i class="far fa-file-pdf fa-lg"></i><span>Paper</span></button></a>
+                {% endif %}
+                {% if research.code %}
+                <a href="{{research.code}}" target="_blank"><button type="button" class="research-button"><i class="fab fa-github fa-lg"></i><span>Code</span></button></a>
+                {% endif %}
+                {% if research.video %}
+                <a href="{{research.video}}" target="_blank"><button type="button" class="research-button"><i class="fas fa-video fa-lg"></i><span>Video</span></button></a>
+                {% endif %}
+                {% if research.researcher %}
+                <a href="{{research.researcher}}" target="_blank"><button type="button" class="research-button"><i class="far fa-file-pdf fa-lg"></i><span>Researcher</span></button></a>
+                {% endif %}
+                {% if research.slides %}
+                <a href="{{research.slides}}" target="_blank"><button type="button" class="research-button"><i class="far fa-presentation fa-lg"></i><span>Slides</span></button></a>
+                {% endif %}
+                {% if research.bib %}
+                <a href="javascript:toggleBib('{{research.bib}}')"><button type="button" class="research-button"><span>BibTeX</span></button></a>
+                {% endif %}
+              </div>
+              {{ research.excerpt }}
+              {% if research.bib %}
+              <pre id="{{research.bib}}" style="display: none;">
+                {%- include {{research.bib}} -%}
+              </pre>
+              {% endif %}
+            </td>
+          </tr>
+          {% endif %}
+          {% endfor %}
+          {% endfor %}
+        </table>
+
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:0px">
+              <br>
+              <p style="text-align:center;font-size:small;">
+                Inspired from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
+

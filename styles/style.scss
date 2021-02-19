@@ -1,0 +1,215 @@
+---
+---
+
+//
+// IMPORTS
+//
+
+//@import "reset";
+//@import "variables";
+// Syntax highlighting @import is at the bottom of this file
+
+/**************/
+/* BASE RULES */
+/**************/
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body {
+  background-color: #F9F9F9;
+}
+
+body,
+td,
+th,
+tr,
+p,
+a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-display: auto;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-display: auto;
+}
+
+h2 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-display: auto;
+  font-weight: normal;
+  padding: 0px;
+  margin: 0px;
+  display:inline; 
+}
+
+h3 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  font-display: auto;
+  padding: 0px;
+  margin: 0px;
+  display:inline; 
+}
+
+h1 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  font-display: auto;
+  text-align: center;
+  padding: 0px;
+  margin-block-start: 14px;
+  margin-block-end: 14px;
+  margin-left: 0px;
+  margin-right: 0px;
+
+}
+
+.one {
+  width: 160px;
+  height: 160px;
+  position: relative;
+}
+
+.two {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+.fade {
+  transition: opacity .2s ease-in-out;
+  -moz-transition: opacity .2s ease-in-out;
+  -webkit-transition: opacity .2s ease-in-out;
+}
+
+span.highlight {
+  background-color: #ffffd0;
+}
+
+// Settled on moving the import of syntax highlighting to the bottom of the CSS
+// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
+//@import "highlights";
+//@import "svg-icons";
+
+.contact-buttons {
+  text-align: center;
+}
+
+.contact-buttons i {
+  padding: 6px;
+}
+
+hr {
+  margin-top: 21px;
+  margin-bottom: 21px;
+  border: 0;
+  border-top: 1px solid rgb(210, 210, 210);
+}
+
+.research-button {
+  background-color: #1772d0;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  border-color: transparent;
+  padding: 5px 5px;
+  outline: none;
+  min-height: 32px;
+}
+
+.research-button i {
+  padding-right: 5px;
+}
+
+.research-button:hover {
+  background-color: #f09228;
+}
+
+.research-buttons {
+  padding-top: 5px;
+}
+
+.research-buttons a {
+  padding-right: 5px;
+}
+
+.timeline {
+  width: 100%;
+  border-left: 3px solid #ddd;
+  margin: 0px;
+  margin-left: 27px;
+  margin-bottom: 50px;
+}
+
+.timeline .timeline-item {
+  margin-bottom: 10px;
+}
+
+.timeline .timeline-news {
+  margin: 20px;
+  margin-right: 47px;
+}
+
+.timeline .timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  position: absolute;
+  left: -27px;
+  top: 5px;
+}
+
+.timeline .timeline-date {
+  position: relative;
+}
+
+.timeline .timeline-date span {
+  color: #fff;
+  border-radius: 4px;
+  padding: 3px 5px;
+  font-size: 8pt;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  text-transform: uppercase;
+}
+
+.timeline .timeline-title {
+  font-size: 14px;
+  margin-left: 10px;
+  display: inline;
+  line-height: 1.5;
+}
+
+pre {
+  padding: 9.5px;
+  font-size: 13px;
+  line-height: 1.3;
+  color: #333;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  white-space: pre-wrap;       /* Since CSS 2.1 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  word-break: break-all;
+}
