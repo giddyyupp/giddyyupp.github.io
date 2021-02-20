@@ -1,0 +1,12 @@
+---
+layout: post
+title:  "DRAW: Deep networks for Recognizing styles of Artists Who illustrate children's books"
+date:   2017-06-06
+categories: research
+author: "Samet Hicsonmez"
+authors: "<strong>Samet Hicsonmez</strong>, Nermin Samet, Fadime Sener, Pinar Duygulu"
+venue: "Proceedings of the 2017 ACM on International Conference on Multimedia Retrieval"
+paper: https://dl.acm.org/doi/abs/10.1145/3078971.3078982
+bib: bib/draw.bib
+---
+
