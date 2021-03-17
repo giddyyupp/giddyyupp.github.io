@@ -6,6 +6,7 @@ categories: research
 author: "Samet Hicsonmez"
 authors: "<strong>Samet Hicsonmez</strong>, Nermin Samet, Fadime Sener, Pinar Duygulu"
 venue: "Proceedings of the 2017 ACM on International Conference on Multimedia Retrieval"
+arxiv: https://arxiv.org/abs/1704.03057
 paper: https://dl.acm.org/doi/abs/10.1145/3078971.3078982
 bib: bib/draw.bib
 ---
