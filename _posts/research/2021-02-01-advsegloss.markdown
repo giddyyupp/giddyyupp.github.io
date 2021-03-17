@@ -6,7 +6,7 @@ categories: research
 author: "Samet Hicsonmez"
 authors:  "<strong>Samet Hicsonmez</strong>, Nermin Samet, Emre Akbas, Pinar Duygulu"
 venue: "Preprint"
-arxiv: https://arxiv.org/abs/2002.05638
+arxiv: https://arxiv.org/abs/2102.06192
 code: https://github.com/giddyyupp/AdvSegLoss
 bib: bib/advsegloss.bib
 ---
